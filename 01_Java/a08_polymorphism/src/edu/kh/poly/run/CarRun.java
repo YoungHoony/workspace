@@ -85,13 +85,15 @@ public class CarRun {
 		//   부모 참조 변수를 자식 타입으로 강제 형변환해서
 		//   다시 자식 객체를 온전히 참조할 수 있게 만드는 것 
 		
-		 					//다운 캐스팅 (참조 변수를 자식 타입으로 바꾸는 것)
+		 					
+		System.out.println("다운 캐스팅 확인");
+		//다운 캐스팅 (참조 변수를 자식 타입으로 바꾸는 것)
 		System.out.println( ((Porsche)carArr[1]).isOpenTheDoor() );  //강제형변환
 		System.out.println(((Spark)carArr[2]).getDiscountRate());  // "." 이 우선순위가 높기 때문에,
 																   // ()를 꼭 붙혀서 강제형변환을 먼저해야한다
 		
 		
-		
+		// git 연습 중입니다 
 		
 		
 		
