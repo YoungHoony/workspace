@@ -17,7 +17,6 @@ public class CalculatorRun {
 		// 2. 인터페이스는 부모 참조 변수가 될 수 있을까?
 		//    (다형성)
 		//Calculator calc = new JYHCalculator();
-		
 		//Calculator calc = new JYHCalculator();
 		Calculator calc = new JYJCalculator();
 		

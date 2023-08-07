@@ -39,7 +39,10 @@ public class JYHCalculator implements Calculator {
 
 	@Override
 	public int pow(int a, int x) {
-	    return (int) Math.pow(a, x);     
+		// x가 무조건 양수인 경우
+								// 재귀 호출
+		return x == 1 ? a : a * pow(a, x-1) ;
+	   
 	
 				
 	}

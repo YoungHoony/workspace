@@ -5,8 +5,6 @@ package edu.kh.poly.model.dto;
 
 public class Person extends Animal {
 
-	
-	
 	private String name;
 	private int age;
 	
