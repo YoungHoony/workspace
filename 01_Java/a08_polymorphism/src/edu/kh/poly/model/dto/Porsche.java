@@ -27,7 +27,14 @@ public class Porsche extends Car {
 	
 	@Override
 	public String toString() {
-		return "Porsche [openTheDoor=" + openTheDoor + "]";
+		return super.toString() + " / Porsche [openTheDoor=" + openTheDoor + "]";
+	}
+	
+	@Override
+	public void bindingTest() {
+		System.out.println("Porsche 자료형 입니다.");
+		
+		
 	}
 
 	
