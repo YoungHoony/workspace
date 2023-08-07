@@ -97,7 +97,7 @@ public class ArrayEx2 {
 		// sc.next()를 이용해 문자열을 입력 받은 후
 		// string == char 배열이랑 같은 것이다. 
 		// String.charAt(index)를 이용해 0번 인덱스 값을 반환 받기
-		// 자바가 char가 없는데, 우회해서 받을 수 있게 char.ar(index)를 사용한다.
+		// 자바가 char가 없는데, 우회해서 받을 수 있게 char.at(index)를 사용한다.
 		
 		
 		System.out.print("검색할 알파벳을 입력해주세요 : ");

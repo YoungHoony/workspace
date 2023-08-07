@@ -84,6 +84,7 @@ public class ArrayEx1 {
 		
 		int [] numbers = new int[4]; //선언 및 할당 
 		
+		
 		// new 연산자 : Heap 영역에 메모리를 새롭게 할당
 		
 		// * 배열 직접 초기화 *
@@ -189,7 +190,7 @@ public class ArrayEx1 {
 		System.out.println("오늘의 메뉴 : " + menuArray[index]);
 		
 		// 오늘의 메뉴 : 돈까스 , 햄버거, 제육볶음... 
-		
+		// int index = (int)(Math.random() * menuArray.length);
 	
 	}
 	
@@ -441,24 +442,7 @@ public class ArrayEx1 {
 		
 		}
 		
-		
 	
-	
-
 	
 }
-	
-	
-
-
-
-		
-		
-
-		
-		
-		
-		
-		
-		
 	
