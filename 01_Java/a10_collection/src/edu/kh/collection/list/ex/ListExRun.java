@@ -5,7 +5,8 @@ public class ListExRun {
 		
 		ListEx List = new ListEx();
 		
-		List.ex1();
+//		List.ex1();
+		List.ex2();
 	}
 
 }
