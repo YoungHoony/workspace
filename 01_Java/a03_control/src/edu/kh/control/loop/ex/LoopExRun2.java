@@ -18,7 +18,7 @@ public class LoopExRun2 {
 		//loop2.ex10();
 		//loop2.ex11();
 		//loop2.ex12();
-		//loop2.ex13();
+		loop2.ex13();
 		//loop2.ex14();
 		//loop2.ex15();
 		//loop2.ex16();

@@ -124,9 +124,7 @@ public class MemberService {
 				if(mem.getId().equals(id) && mem.getPw().equals(pw)) {
 					return mem;
 				} 
-	
 			}
-	
 		return null;
 	}
 	

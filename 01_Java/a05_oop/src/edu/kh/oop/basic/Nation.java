@@ -1,6 +1,5 @@
 package edu.kh.oop.basic;
 
-import java.nio.file.spi.FileSystemProvider;
 
 //국민 정보를 저장할 객체를 위한 클래스 (설계도) 
 public class Nation {

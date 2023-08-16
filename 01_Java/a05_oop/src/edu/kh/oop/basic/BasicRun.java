@@ -77,7 +77,7 @@ public class BasicRun {
 		/* 간접 접근 기능 */
 		
 		n1.setJob("(돈 많이 버는) 웹 개발자");
-		System.out.println(n1.getJob());
+		//System.out.println(n1.getJob());
 		
 		n1.introduce();
 		

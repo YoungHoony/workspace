@@ -115,7 +115,7 @@ public class ArrayEx2 {
 		// true :  "검색 결과 없음" 으로 의미를 부여
 		// false :  " 검색 결과가 존재함"으로 의미를 부여
 		
-		boolean flag = true;
+		boolean flag = false;
 		
 									// 3
 		for (int row = 0 ; row < arr.length ; row++) {
@@ -129,7 +129,7 @@ public class ArrayEx2 {
 				if (arr[row][col] == input ) {
 					System.out.printf("%c는 %d행 %d열에 있습니다", arr[row][col], row, col);    //%c : char
 				
-					flag = false; // flag 변경
+					flag = true; // flag 변경
 				} 
 				
 			}
@@ -138,7 +138,7 @@ public class ArrayEx2 {
 		
 		
 		//2중 for문 (검색) 코드가 끝난 후 flag의 상태를 검사
-		if(flag) { // flag가 true이면 if 실행
+		if(!flag) { // flag가 true이면 if 실행
 			       // flag가 false이면 if 실행 안함
 			System.out.println("검색 결과가 없습니다");
 		}

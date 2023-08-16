@@ -30,6 +30,8 @@ public class MemberView {
 				System.out.println("1. 회원 목록 조회");
 				System.out.println("2. 회원 가입");
 				System.out.println("3. ID/PW 일치하는 회원 조회");
+				System.out.println("4. ID/PW 일치하는 회원의 비밀번호 변경");
+				System.out.println("5. ID/PW 일치하는 회원의 회원 탈퇴");
 				System.out.println("0. 종료");
 				
 				System.out.print("메뉴를 선택하세요 : ");
@@ -39,6 +41,8 @@ public class MemberView {
 				case 1:  selectAll(); break;
 				case 2:  signUp();    break;
 				case 3:  selectOne(); break;
+//				case 4:  changePw(); break;
+//				case 5:  deleteOne(); break;
 				case 0:  System.out.println("<프로그램이 종료됩니다>");break;
 				default : System.out.println("메뉴의 번호만 입력해주세요.");
 				}
