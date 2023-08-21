@@ -8,8 +8,8 @@ public class BranchExRun {
    
 		//branch.ex1();
 		//branch.ex2();
-  // branch.ex3();
-   branch.upDownGame();
+  //branch.ex3();
+  branch.upDownGame();
 	   
 		
 		
