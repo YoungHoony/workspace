@@ -492,7 +492,7 @@ WHERE PHONE IS NOT NULL; -- PHONE 컬럼이 NULL아닌 행만 카운트
 -- EMPLOYEE 테이블에 존재하는 부서코드의 수를 조회 
 -- (EMPLOYEE 테이블에 부서코드가 몇종류)
 SELECT COUNT(DISTINCT DEPT_CODE)
-FROM EMPLOYEE;
+FROM EMPLOYEE; -- 6
 
 -- EMPLOYEE 테이블에 존재하는 여자 사원의 수
 SELECT COUNT(*)
