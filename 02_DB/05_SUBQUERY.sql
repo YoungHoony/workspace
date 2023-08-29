@@ -128,8 +128,8 @@ FROM EMPLOYEE e
 LEFT JOIN DEPARTMENT ON (DEPT_CODE = DEPT_ID)
 GROUP BY DEPT_TITLE
 HAVING SUM(SALARY) = (SELECT MAX(SUM(SALARY))
-FROM EMPLOYEE e 
-GROUP BY DEPT_CODE);
+						FROM EMPLOYEE e 
+						GROUP BY DEPT_CODE);
                       
                       
 
@@ -706,7 +706,7 @@ FROM EMPLOYEE
 WHERE DEPT_CODE = (SELECT DEPT_CODE 
 				   FROM EMPLOYEE
 				   WHERE EMP_NAME = '전지연')
-				  AND EMP_NAME != '전지연';
+AND EMP_NAME != '전지연';
 	
 				 
 -- 2) 고용일이 2000년도 이후인 사원들 중 급여가 가장 높은 사원의
