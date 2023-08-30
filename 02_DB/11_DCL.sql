@@ -60,6 +60,7 @@ CREATE USER a230830_jyh IDENTIFIED BY "test1234";
 GRANT CREATE SESSION TO a230830_jyh;
 
 --------------- [방금 생성한 계정]-----------------
+------ [테스트 사용자 계정] -------
 -- 테이블 생성	
 CREATE TABLE TB_MEMBER(
 	MEMBER_NO NUMBER PRIMARY KEY,
@@ -75,12 +76,69 @@ CREATE TABLE TB_MEMBER(
 -- 테이블 생성 권한, TABLESPACE 할당
 GRANT CREATE TABLE TO a230830_jyh;
 
+ALTER USER a230830_jyh DEFAULT TABLESPACE "A230724"
+QUOTA 10M ON "A230724";
 
+------ [테스트 사용자 계정] -------
+-- 다시 테이블 생성	
+CREATE TABLE TB_MEMBER(
+	MEMBER_NO NUMBER PRIMARY KEY,
+	MEMBER_ID VARCHAR2(30) NOT NULL,
+	MEMBER_PW VARCHAR2(30) NOT NULL	
+);
 
+---------------------------------------------------------------
 
+-- [관리자 계정 접속] --
 
+/* ROLE(역할 == 권한의 묶음, 권한명 단순화) 
+ * 
+ * CONNECT(접속) : DB 접속 권한 (CREATE SESSION) 
+ * 
+ * RESOURCE (자원) : DB 기본 객체 8개 생성 권한 
+ * 
+ * */
 
-GRANT CONNECT, RESOURCE, CREATE VIEW TO a230724_jyh;
+-- SYS 계정으로 ROLE 확인하기
+SELECT * FROM ROLE_SYS_PRIVS 
+WHERE ROLE = 'RESOURCE';
 
-ALTER USER a230724_jyh DEFAULT TABLESPACE "A230724"
-QUOTA 20M ON "A230724";
+-- 테스트 사용자 계정에 접속, 기본 객체 8개, VIEW 생성권한 부여하기 
+GRANT CONNECT, RESOURCE, CREATE VIEW TO a230830_jyh;
+
+--------------------------------------------------------------------
+
+------ [테스트 사용자 계정] -------
+-- 객체 권한 --
+
+SELECT * FROM TB_MEMBER;
+
+INSERT INTO TB_MEMBER 
+VALUES ( 20, 'TEST_JYH', 'QWER1234' );
+
+COMMIT;
+
+SELECT * FROM TB_MEMBER;
+
+--A230830_BDH에게 권한 주기
+GRANT SELECT, INSERT ON TB_MEMBER TO A230830_BDH;
+
+-- 다른 계정의 TB_MEMBER 테이블 조회
+
+SELECT * FROM A230830_BDH.TB_MEMBER;
+
+SELECT * FROM TB_MEMBER;
+
+INSERT INTO A230830_BDH.TB_MEMBER VALUES (999, 'TEST_JYH','QWER1234');
+
+COMMIT; 
+
+SELECT * FROM A230830_BDH.TB_MEMBER;
+
+-- 권한 회수 
+REVOKE SELECT, INSERT ON TB_MEMBER FROM A230830_BDH;
+
+-- 권한 회수 확인
+
+SELECT * FROM A230830_BDH.TB_MEMBER;
+
