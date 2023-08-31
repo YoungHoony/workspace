@@ -236,7 +236,6 @@ SELECT * FROM DCOPY;
 SELECT * FROM DEPT_COPY; -- 이름이 변경되어 DEPT_COPY 테이블명으로 조회 불가
 
 
-
 /* 
  * 
  * 1) MEMBER 테이블 삭제하고 진행하기
@@ -256,7 +255,7 @@ CREATE TABLE MEMBER (
  ENROLL_DATE DATE DEFAULT SYSDATE,
  MEMBER_DEL_FL CHAR(1) DEFAULT 'N' NOT NULL,
  
- CHECK(MEMBER_DEL_FL IN ('N','Y'))
+ CHECK(MEMBER_DEL_FL IN ('Y','N'))
  
 );
 
@@ -311,27 +310,11 @@ COMMENT ON COLUMN "COMMENT".BOARD_NO IS '댓글이 작성된 게시글 번호';
 COMMENT ON COLUMN "COMMENT".MEMBER_NO IS '댓글 작성자 회원 번호';
 
 
-
 SELECT * FROM "COMMENT";
 
 
 
-
-
 DROP TABLE MEMBER;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
