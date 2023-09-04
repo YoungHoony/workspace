@@ -27,6 +27,15 @@ public class MemberView {
 				
 				System.out.println("1. 회원 가입(INSERT)");
 				System.out.println("2. 회원 정보 수정(UPDATE)");
+				System.out.println("3. 회원 탈퇴 (DELETE)");
+				
+				System.out.println(" 비밀번호 변경(UPDATE)");
+				// 이메일, 비밀번호, 새 비밀번호를 입력 받아
+				// 이메일, 비밀번호가 일치하는 회원의 비밀번호를 
+				// 새 비밀번호로 변경
+				// 메서드 이름 : updatePw()
+				// hint : Member 객체 하나라 안돼요
+				//		(비밀번호가 [두개]지요)
 				
 				System.out.println("0. 종료");
 				
@@ -37,6 +46,8 @@ public class MemberView {
 				switch(input) {
 				case 1 : insertMember(); break;
 				case 2 : updateMember(); break;
+				case 3 : deleteMember(); break;
+				case 4 : updatePw(); break;
 				
 				case 0 : System.out.println("\n프로그램 종료\n"); break;
 				default : System.out.println("\n메뉴에 작성된 번호만 입력하세요\n");
@@ -130,6 +141,66 @@ public class MemberView {
 			
 		}
 		
+	/**
+	 * 회원 탈퇴 화면
+	 */
+	private void deleteMember() {
+		
+		// 이메일, 비밀번호가 일치하는 회원 탈퇴(DELETE)
+		// 이메일, 비밀번호 일치 -> 탈퇴 성공
+		// 불일치 -> 이메일 또는 비밀번호 불일치  출력
+		
+		System.out.println("\n***** 회원 탈퇴 *****\n");
+		
+		System.out.print("탈퇴할 이메일 : ");
+		String email = sc.next();
+		
+		System.out.print("비밀번호 : ");
+		String pw = sc.next();
+		
+		// 1) 기본 생성자로 객체 생성 후 setter로 값 세팅
+//		Member member = new Member();
+//		member.setMemberEmail(email);
+//		member.setMemberPw(pw);
+		
+		// 2) 이메일, 비밀번호를 매개변수로 갖는 생성자 만들기
+		Member member = new Member(email, pw);
+		
+		// 삭제 서비스 호출 (성공 1, 실패 0 반환)
+		int result = service.deleteMember(member);
+		
+		if(result > 0)  System.out.println("탈퇴 성공");
+		else			System.out.println("이메일 또는 비밀번호 불일치");
+	}
+	
+	
+	/**
+	 * 비밀번호 변경
+	 */
+	private void updatePw() {
+		System.out.println("\n***** 비밀번호 변경 *****\n");
+		
+		System.out.print("변경할 이메일 : ");
+		String email = sc.next();
+		
+		System.out.print("현재 비밀번호 : ");
+		String pw = sc.next();
+		
+		System.out.print("새 비밀번호 : ");
+		String newPw = sc.next();
+		
+		// 굳이 Member 객체에 저장 안하고 전달해도 무관
+		int result = service.updatePw(email, pw, newPw);
+		
+		if(result > 0) System.out.println("비밀번호가 변경되었습니다");
+		else		   System.out.println("아이디/비밀번호 불일치");
+		
+		
+		
+	}
+	
+	
+	
 	
 }
 	
