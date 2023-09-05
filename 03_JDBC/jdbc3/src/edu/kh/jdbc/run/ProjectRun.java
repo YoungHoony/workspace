@@ -9,6 +9,7 @@ public class ProjectRun {
 	ProjectView view = new ProjectView();
 	
 	view.displayMenu();
+	
 		
 	
 	}
