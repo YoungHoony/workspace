@@ -21,23 +21,35 @@
     transition-duration: 0.5s;
 }
 
-.outer{
-    width: 400px;
-    height : 100px;
-    border : 1px solid black;
-    border-radius: 0px;
-    display : flex;
-}
-
-.bbtn {
-    width : 80px;
-    height : 80px; 
-    border : 1px solid black;
-    display : flex;
+.container{
+    width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+  }
+  
+  .key-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: 3px solid black;
+  }
+  
+  .key{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+    display: flex;
     justify-content: center;
-    margin: 10px;
-    border-radius: 10px;
-}
-
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin : 10px 0;
+  
+    user-select: none;
+  }
 
