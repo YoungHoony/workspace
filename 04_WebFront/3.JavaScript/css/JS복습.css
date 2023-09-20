@@ -1,0 +1,72 @@
+*{
+    box-sizing : border-box;
+    padding: 0;
+    margin : 0;
+}
+
+.container{
+    width: 600px;
+    min-height : 70vh;
+    border : 3px solid black;
+    border-radius : 20px;
+    margin: 60px auto;
+}
+
+.container-row{
+    display : flex;
+    width : 100%;
+    padding : 28px;
+
+}
+
+.input-area{
+    flex-direction : column;
+    align-items: center;
+}
+
+/* 빙고 영역 */
+.bingo-area {
+    justify-content: center;
+    align-items: center;
+}
+
+.bingo-row{
+    display : flex;
+}
+
+.bingo-col{
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+    margin: 3px;
+
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size : 25px;
+    font-weight: bold;
+    user-select : none;
+    cursor: pointer;
+}
+
+.bingo-col:hover{
+    background-color : aqua;
+}
+
+.bingo-col:active{
+    background-color: rgb(7, 123, 255);
+    transition-duration: 0.2s;
+}
+
+/* 선택했을 때 */
+.bingo-col.check{
+    background-color: rgb(253, 38, 92);
+}
+
+/* 빙고 됐을 때 */
+.bingo-col.bingo{
+    background-color: skyblue;
+}
