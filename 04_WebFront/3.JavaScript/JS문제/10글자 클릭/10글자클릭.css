@@ -1,0 +1,29 @@
+div {
+    border-collapse: collapse;
+    
+}
+
+.table1 {
+    display: flex;
+
+}
+.num1{
+    border : 1px solid black;
+    display: flex;
+    justify-content : center;
+    width: 100px;
+    height : 100px;
+    align-items: center;
+    user-select: none;
+    font-size : 25px;
+    cursor: pointer;
+
+}
+
+.num1:hover {
+    background-color: skyblue;
+}
+
+.num1:active {
+    background-color: orange;
+}
