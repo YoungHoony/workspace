@@ -1,0 +1,61 @@
+h1 {
+    font-family: 'MBC1961GulimM';
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.container {
+    /* display: b; */
+    width: 400px;
+    height: 350px;
+
+}
+
+strong{
+    font-family: 'KCCChassam';
+    margin-left: 30px;
+    justify-items: center;
+}
+
+span{
+    font-family: 'KCCChassam';
+    font-size : 10px;
+    display: flex;
+    margin-top: 4px;
+    margin-left : 108px;
+    color: rgb(72, 74, 77);
+    font-weight: lighter;
+}
+
+.signup-input {
+    border : 0px;
+    border-bottom: 1px dashed #ff5530;
+    width : 220px;
+    margin-left : 20px;
+    margin-top : 23px;
+    
+}
+
+button {
+    font-family: 'KCCChassam';
+    font-size : 15px;
+    width: 280px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 10px;
+    align-items: center;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #ff5530 ;
+    color: white
+
+}
+
+.signup-input2 {
+    border : 0px;
+    border-bottom: 1px dashed #ff5530;
+    width : 220px;
+    margin-left : 20px;
+    margin-top : 23px;
+    
+}
