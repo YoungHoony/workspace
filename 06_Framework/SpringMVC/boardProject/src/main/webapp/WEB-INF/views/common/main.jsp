@@ -28,11 +28,13 @@
 
         <section class="content">
             <section class="content-1">
-
+        
             </section>
 
             <section class="content-2">
 
+            <%-- 어떤 scope에도 loginMember가 없거나 null이면 --%>
+            <c:if test="${empty loginMember}">
                 <form action="/member/login" method="POST" id="loginFrm">
                     <fieldset class="id-pw-area">
                         <section>
@@ -56,6 +58,29 @@
                         <a href="#">ID/PW 찾기</a>
                     </article>
                 </form>
+            </c:if>
+
+            <%-- loginMember가 존재하는 scope가 있을 때 --%>
+            <c:if test="${not empty loginMember}">
+
+                <article class="login-area">
+
+                    <a href="#">
+                        <img id="memberProfile" src="/resources/images/user.png">
+                    </a>
+                
+                    <div class="my-info">
+                        <div>
+                            <a href="#" id="nickname">${loginMember.memberNickname}</a>
+                            <a href="/member/logout" id="logoutBtn">로그아웃</a>
+                        </div>
+
+                        <p>${loginMember.memberEmail}</p>
+                    </div>
+
+                </article>
+            
+            </c:if>
 
 
                 
