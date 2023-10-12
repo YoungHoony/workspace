@@ -53,7 +53,7 @@ CREATE SEQUENCE SEQ_MEMBER_NO NOCACHE;
 -- 샘플 계정 추가
 INSERT INTO "MEMBER"
 VALUES (SEQ_MEMBER_NO.NEXTVAL, 'member01@naver.com', 'pass01',
-	'회원1', '01012341234', '04540^^^ 서울시 중구 남대문로 120^^^2층',
+	'회원1', '01012341234', '04540^^^서울시 중구 남대문로 120^^^2층',
 	NULL, DEFAULT, DEFAULT, DEFAULT);
 
 COMMIT;
@@ -69,6 +69,15 @@ WHERE MEMBER_DEL_FL = 'N'
 AND MEMBER_EMAIL ='member01@naver.com'
 AND MEMBER_PW ='pass01'
 ;
+
+-- 샘플 회원 비밀번호 변경(암호화 적용)
+UPDATE "MEMBER" SET
+MEMBER_PW = '$2a$10$fihH1PGKI3bNaUVtscU48ugAG4UH4vS3zcKMihy7NtV2sDW0x6v16'
+WHERE MEMBER_NO = 1;
+
+COMMIT;
+
+
 
 
 

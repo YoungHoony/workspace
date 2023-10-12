@@ -1,0 +1,50 @@
+1) dispatcher servlet : 모든 요청 받아서 주소를 분석한 후 알맞은 컨트롤러 메서드 매핑
+	- servlet-context.xml
+	- web.xml
+
+2) Handler Mapping 
+	- RequestMapping
+	- PostMapping
+	- GetMapping
+
+
+
+자바에서 암호화
+
+ 	- 문자열, 파일 등을 알아보기 힘들게 바꾸는 것 
+	- 방법
+	  1) 암호화 - 복호화를 같이 하는 방법 (요즘 사용 잘 안함)
+	  2) 복호화가 불가능한 암호화
+	  3) 같은 문자열이라도 다른 결과가 나타나는 암호화 (우리가 사용하려는 암호화)
+
+BCrypt 암호화 방식 (Crypto ==암호화)
+	- 입력된 문자열에 랜덤한 값(salt)을 더해서 암호화를 진행 
+	  -> 암호화 결과가 항상 다름
+
+	- 단순 비교 방법을 사용할 수 없고
+	  Bcrypt에서 제공하는 matches() 메서드 이용해야지만 비교 가능
+
+	- Spring에서 사용 시  pom.xml에서 아래 3가지를 추가
+		* spring-security-core
+		* spring-security-web
+		* spring-security-config
+
+
+[]
+주소 입력 시 : a,b,c
+미입력 : ,,
+
+[String[] memberAddress]
+주소 입력 : {"a", "b", "c"} (String[])
+미입력 : {"", "", ""} (String[])
+
+구분자 , -> ^^^ 변경
+
+미입력시 : null(DB에 null로 저장)
+
+
+
+UncheckedException의 특징
+	- 예외처리를 강요하지 않음
+	- 예외가 발생한 경우 호출부로 예외를 던짐(throws)
+	- 

@@ -53,6 +53,28 @@
 		    <version>3.5.13</version>
 		</dependency>
 		
+		<!-- Spring-security -->
+	      <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+	      <dependency>
+	          <groupId>org.springframework.security</groupId>
+	          <artifactId>spring-security-core</artifactId>
+	          <version>5.7.1</version>
+	      </dependency>
+      
+     	 <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+	      <dependency>
+	          <groupId>org.springframework.security</groupId>
+	          <artifactId>spring-security-web</artifactId>
+	          <version>5.7.1</version>
+	      </dependency>
+      
+	      <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+	      <dependency>
+	          <groupId>org.springframework.security</groupId>
+	          <artifactId>spring-security-config</artifactId>
+	          <version>5.7.1</version>
+	      </dependency>
+		
 		<!-- Spring에서 쉽게 Mybatic 사용할 수 있게 만드는 모듈 -->
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<dependency>
