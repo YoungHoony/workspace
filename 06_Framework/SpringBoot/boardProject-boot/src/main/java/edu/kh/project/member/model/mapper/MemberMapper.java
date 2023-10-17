@@ -24,9 +24,21 @@ import edu.kh.project.member.model.dto.Member;
  *  
  * */
 
+//interface == 접점
+// 메퍼 어노테이션이라고 하면 DAO 클라스가 springboot에서 자동적으로 만들어짐. (그래서 DAO 라는 클라스를 따로 만들지 않아도 됨)
 @Mapper
 public interface MemberMapper {
 	
+	/** 로그인
+	 * @param inputMember
+	 * @return loginMember
+	 */
 	Member login(Member inputMember);
+
+	/** 회원가입
+	 * @param inputMember
+	 * @return result
+	 */
+	int signup(Member inputMember);
 
 }

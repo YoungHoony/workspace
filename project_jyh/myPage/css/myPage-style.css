@@ -1,0 +1,103 @@
+/* 회원 페이지 전체를 감싸고 있는 요소 */
+* {
+    background-color: rgb(29, 29, 29);
+    color : white;
+    padding: 0;
+    margin: 0;
+}
+
+
+.myPage-wallpaper {
+    width: 100%;
+    height: 280px;
+}
+
+#wallpaper {
+    width: 100%;
+    height: 400px;
+}
+
+.myPage-content{
+    width: 1280px;
+    min-height: 700px;
+    margin: 50px auto;
+}
+
+.profile-middle-area {
+    display : flex;
+}
+
+
+#memberProfile {
+    width : 140px;
+    height : 140px;
+}
+
+#nickName {
+    margin-top : 100px;
+    margin-left : 10px;
+    font-size: 20px;
+
+    height : 70px;
+}
+
+#email {
+    margin-top : 105px;
+    margin-left : 10px;
+    width: 80px;
+    height: 70px;
+}
+
+
+/* 사이드메뉴 */
+.left-side{
+    width: 20%;
+    margin-top : 50px;
+    
+}
+
+label {
+    font-size : 20px;
+    font-weight: bold;
+}
+
+.list-group{
+   
+    list-style: none;
+    border-radius: 20px;
+    padding-right: 20px;
+    padding-left : 20px;
+    background-color: white;
+
+}
+
+.list-group > li{
+    height: 60px;
+    font-size: 16px;
+}
+
+.list-group > li > a{
+    color:black;
+    text-decoration: none;
+
+    display: flex;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+}
+
+.list-group > li > a:hover{
+    transition-duration: 0.2s;
+    
+    color: rgb(147, 251, 1);
+    
+}
+
+.myPage-main{
+
+    width: 80%;
+    padding: 0 50px;
+}

@@ -1,6 +1,7 @@
 package edu.kh.project.member.model.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,7 +23,6 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	private MemberMapper mapper;
 
-	
 	@Override
 	public Member login(Member inputMember) {
 	
@@ -41,5 +41,27 @@ public class MemberServiceImpl implements MemberService {
 		loginMember.setMemberPw(null);
 		return loginMember;
 	
+	}
+	
+	@Override
+	public int signup(Member inputMember, String[] memberAddress) {
+		
+		// 주소가 입력되지 않은 경우
+		if(inputMember.getMemberAddress().equals(",,")) {
+			inputMember.setMemberAddress(null); // null로 변환
+		} else { // 주소를 입력한 경우
+			// 배열 -> 문자열로 합쳐서 inputMember에 추가
+			
+			String address = String.join("^^^", memberAddress);
+			inputMember.setMemberAddress(address);
+		}
+		
+		// 비밀번호 암호화(DB에 암호화된 비밀번호 저장) 
+		String encPw = bcrypt.encode(inputMember.getMemberPw());
+		inputMember.setMemberPw(encPw);
+		
+		// Mapper 메서드 호출
+		
+		return mapper.signup(inputMember);
 	}
 }

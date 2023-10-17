@@ -16,12 +16,13 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-@Configuration //클래스 내부에서 Bean 생성 및 설정(root-context.xml, servlet-context.xml 대신 클래스 파일로 만들어서 사용)
+@Configuration //클래스 내부에서 Bean 생성 및 설정
+				//(root-context.xml, servlet-context.xml 대신 클래스 파일로 만들어서 사용)
 
 //PropertySource : properties 파일의 내용을 이용하겠다는 어노테이션
 // 다른 properties도 추가하고 싶으면 어노테이션을 계속 추가
 @PropertySource("classpath:/config.properties")
-public class DBConfig {
+public class DBConfig { // DBConfig는 DB연결하는데 필요한 클라스 
 	
 	@Autowired
 	private ApplicationContext applicationContext; 
@@ -37,9 +38,9 @@ public class DBConfig {
 	// prefix를 지정하여 spring.datasource.hikari으로 시작하는 설정을 모두 적용
 	
 	@Bean
-	@ConfigurationProperties(prefix = "spring.datasource.hikari")
+	@ConfigurationProperties(prefix = "spring.datasource.hikari") // config-properties에 작성되어있는 설정들을 다 가지고 오기
 	public HikariConfig hikariConfig() {
-		return new HikariConfig();
+		return new HikariConfig(); // Connection pool을 만들기 위함.  
 		
 	}
 	
