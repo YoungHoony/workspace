@@ -4,23 +4,125 @@
     color : white;
     padding: 0;
     margin: 0;
+    box-sizing : border-box;
 }
 
+:root {
+    font-size: 62.5%;
+  }
+
+/* header 부분 */
+
+header {
+    border-bottom: 1px solid white;
+    top :0;
+    width: 100%;
+    position : fixed;
+
+}
+
+.header {
+    width: 128rem;
+    height: 7.2rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  a {
+    color: white;
+  }
+  .cls-section {
+    font-size: 1.6rem;
+  }
+  .cls-section:nth-child(1),
+  .cls-section:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cls-section:nth-child(2) {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-a {
+    font-weight: bold;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition-duration: 0.1s;
+    text-decoration: none;
+  }
+  
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    list-style-type: none;
+  }
+  .nav ul a {
+    margin: 0 1rem;
+  }
+  .nav ul a:hover {
+    background-color: rgb(147, 251, 1);
+    color: white;
+  }
+  .cls-section:nth-child(1) {
+    width: 15%;
+  }
+  .cls-section:nth-child(2) {
+    width: 50%;
+  }
+  .cls-section:nth-child(3) {
+    width: 35%;
+  }
+  .cls-search {
+    width: 25rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    display: flex;
+  }
+  .search-btn {
+    width: 90%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+  }
+  .section-form {
+    width: 30rem;
+  }
+  .btn-search {
+    width: 10%;
+  }
+  .search-login {
+    display: flex;
+  }
+  .cls-login {
+    margin-left: 2rem;
+  }
+  .cls-login > a {
+    text-decoration: none;
+  }
+
+/* ----------------------------------------------------------- */
+
+/* myPage - 상단 부분 */
 
 .myPage-wallpaper {
     width: 100%;
-    height: 280px;
+    height: 28rem;
+    margin-top:7.2rem;
 }
 
 #wallpaper {
     width: 100%;
-    height: 400px;
+    height: 45rem;
 }
 
 .myPage-content{
-    width: 1280px;
-    min-height: 700px;
-    margin: 50px auto;
+    width: 128rem;
+    min-height: 100rem;
+    margin: 10rem auto;
 }
 
 .profile-middle-area {
@@ -29,51 +131,51 @@
 
 
 #memberProfile {
-    width : 140px;
-    height : 140px;
+    width : 14rem;
+    height : 14rem;
 }
 
 #nickName {
-    margin-top : 100px;
-    margin-left : 10px;
-    font-size: 20px;
+    margin-top : 10rem;
+    margin-left : 1rem;
+    font-size: 2rem;
 
-    height : 70px;
+    height : 7rem;
 }
 
 #email {
-    margin-top : 105px;
-    margin-left : 10px;
-    width: 80px;
-    height: 70px;
+    margin-top : 11rem;
+    margin-left : 1rem;
+    width: 8rem;
+    height: 7rem;
 }
 
+/* ------------------------------------------------ */
 
 /* 사이드메뉴 */
 .left-side{
     width: 20%;
-    margin-top : 50px;
-    
+    margin-top : 5rem;
 }
 
 label {
-    font-size : 20px;
+    font-size : 2rem;
     font-weight: bold;
 }
 
 .list-group{
    
     list-style: none;
-    border-radius: 20px;
-    padding-right: 20px;
-    padding-left : 20px;
+    border-radius: 2rem;
+    padding-right: 2rem;
+    padding-left : 2rem;
     background-color: white;
 
 }
 
 .list-group > li{
-    height: 60px;
-    font-size: 16px;
+    height: 6rem;
+    font-size: 1.6rem;
 }
 
 .list-group > li > a{
@@ -91,13 +193,30 @@ label {
 
 .list-group > li > a:hover{
     transition-duration: 0.2s;
-    
     color: rgb(147, 251, 1);
     
 }
 
-.myPage-main{
+/* myPage 메인 화면 */
 
-    width: 80%;
-    padding: 0 50px;
+.total-page{
+    display: flex;
+}
+.myPage-main{
+    width: 70%;
+    padding-left : 7rem;
+    padding-top : 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#calender {
+    width: 90rem;
+    height: 40rem;
+    border:0.1rem solid rgb(147, 251, 1);
+}
+
+a {
+    font-size: 1.6rem;
+    padding-left : 70rem;
 }

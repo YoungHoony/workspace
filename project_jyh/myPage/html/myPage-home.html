@@ -12,24 +12,61 @@
 
 </head>
 <body>
+    
     <main>
-        <th:block th:replace="~{common/header}"></th:block>
+        <!-- <th:block th:replace="~{common/header}"></th:block> -->
+        <header>
+            <div class="header">
+              <section class="cls-section">
+                <div class="nav">
+                  <a href="#" class="nav-a" id="nav-logo">로고</a>
+                </div>
+              </section>
+              <section class="cls-section">
+                <div class="nav">
+                  <nav>
+                    <ul>
+                      <li>
+                        <a href="#" class="nav-a" id="nav-1">커뮤니티</a>
+                      </li>
+                      <li><a href="#" class="nav-a" id="nav-2">지식in</a></li>
+                      <li><a href="#" class="nav-a" id="nav-3">쇼츠</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </section>
+              <section class="cls-section">
+                <form action="#">
+                  <div class="cls-search">
+                    <input type="text" class="search-btn" />
+                    <button class="btn-search">검색</button>
+                  </div>
+                </form>
+                <div class="cls-login">
+                  <a href="#">로그인</a>
+                </div>
+              </section>
+            </div>
+          </header>
+        
         <div class="myPage-wallpaper">
             <img src="../images/wallpaper.png" id="wallpaper" >
         </div>
 
         <section class="myPage-content">
         
-        <div class="profile-middle-area">
+            <div class="profile-middle-area">
         
-            <img src="../images/logo.jpg" id="memberProfile">
-            <span id="nickName" th:text="*{memberNickname}">닉네임</span>
-            <p id="email" th:text="*{memberEmail}">이메일</p>
+                <img src="../images/logo.jpg" id="memberProfile">
+                <span id="nickName" th:text="*{memberNickname}">닉네임</span>
+                <p id="email" th:text="*{memberEmail}">이메일</p>
 
-        </div>    
+            </div>    
 
         <hr>
-			<!-- <th:block th:replace="~{myPage/sideMenu}"></th:block> -->
+			<!-- <th:block th:replace="~내{myPage/sideMenu}"></th:block> -->
+        
+        <section class="total-page">
             <section class="left-side">
             
                 <ul class="list-group">
@@ -43,7 +80,7 @@
             
                     <li> <a href="/myPage/shorts">내가 올린 쇼츠</a> </li>
                     
-                    <li> <a href="/myPage/diary">내 다이어리</a> </li>
+                    <li> <a href="/myPage/diary"> 다이어리</a> </li>
                     
                 </ul>
                 
