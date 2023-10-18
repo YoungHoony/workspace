@@ -108,7 +108,8 @@ UPDATE "MEMBER" SET
 MEMBER_DEL_FL = 'Y'
 WHERE MEMBER_NO = 2;
 
-
+-- 관리자 권한으로 변경
+SELECT * FROM "MEMBER";
 
 
 

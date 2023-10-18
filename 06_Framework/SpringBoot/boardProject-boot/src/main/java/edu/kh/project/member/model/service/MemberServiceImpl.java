@@ -61,7 +61,14 @@ public class MemberServiceImpl implements MemberService {
 		inputMember.setMemberPw(encPw);
 		
 		// Mapper 메서드 호출
-		
 		return mapper.signup(inputMember);
 	}
+	
+	@Override
+	public Member quickLogin(String memberEmail) {
+		return mapper.login(memberEmail);
+	}
+	
+	
+	
 }
