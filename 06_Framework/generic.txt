@@ -1,0 +1,10 @@
+Collection : Java 자료구조 모음 
+1) List : index가 있기 때문에, 값이 있어도 중복이 가능
+2) SET : 집합, index가 없어서, 중복이 가능하지 않다
+3) Map : Key, Value (key는 중복이 안되는데, value는 중복이 가능하다)
+
+
+List<Member>
+제네릭(Generic) : 타입을 제한할 수 있음.  
+
+

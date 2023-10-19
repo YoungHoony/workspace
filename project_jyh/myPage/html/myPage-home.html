@@ -53,9 +53,9 @@
             <img src="../images/wallpaper.png" id="wallpaper" >
         </div>
 
-        <section class="myPage-content">
+        <section class="myPage-middle">
         
-            <div class="profile-middle-area">
+            <div class="myPage-middle-profile">
         
                 <img src="../images/logo.jpg" id="memberProfile">
                 <span id="nickName" th:text="*{memberNickname}">닉네임</span>
@@ -64,9 +64,10 @@
             </div>    
 
         <hr>
+        </section>
 			<!-- <th:block th:replace="~내{myPage/sideMenu}"></th:block> -->
         
-        <section class="total-page">
+        <section class="myPage-content">
             <section class="left-side">
             
                 <ul class="list-group">
@@ -74,11 +75,11 @@
             
                     <li> <a href="/myPage/profile">내 프로필</a> </li>
                     
-                    <li> <a href="/myPage/community">내가 작성한 커뮤니티 글</a> </li>
+                    <li> <a href="/myPage/community">나의 커뮤니티 글</a> </li>
                     
-                    <li> <a href="/myPage/kin">내가 작성한 지식in 글</a> </li>
+                    <li> <a href="/myPage/kin">나의 지식in 글</a> </li>
             
-                    <li> <a href="/myPage/shorts">내가 올린 쇼츠</a> </li>
+                    <li> <a href="/myPage/shorts">나의 쇼츠</a> </li>
                     
                     <li> <a href="/myPage/diary"> 다이어리</a> </li>
                     
@@ -91,27 +92,27 @@
 
                 <div class="myCalender">
                     <label>나의 운동 일지</label>
-                    <a href="../html/calender">더보기</a>  
-                    <div id="calender">
-
-                    </div>  
+                      <a href="../html/calender" id="more">더보기</a>  
+                    <div id="calender"></div>  
                 </div>
 
-                <span class="myCommunity">
+                <div class="mid">
+                <div class="myCommunity">
                     <label>내가 쓴 커뮤니티 글</label>
-                    <a href="../html/community">더보기</a>
-                    <span id="myCommunityList"></span>
-                </span>
+                    <a href="../html/community" id="more">더보기</a>
+                    <br>
+                    <div id="myCommunityList"></div>
+                </div>
 
-                <span class="myKin">
+                <div class="myKin">
                     <label>내가 쓴 지식in 글</label>
-                    <a href="../html/kin">더보기</a>
-                    <span id="myKinList"></span>
-                </span>
-
+                    <a href="../html/kin" id="more">더보기</a>
+                    <div id="myKinList"></div>
+                </div>
+              </div>
                 <div class="myShorts">
                     <label>내가 올린 쇼츠</label>
-                    <a href="../html/shorts">더보기</a>
+                    <a href="../html/shorts" id="more">더보기</a>
                     <div id="shorts">
 
                     </div>
