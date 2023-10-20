@@ -8,53 +8,137 @@
 
     <th:block th:replace="~{common/common}"></th:block>
   
-    <link rel="stylesheet" href="/css/myPage/myPage-style.css">
+    <link rel="stylesheet" href="../css/myPage-profile-style.css">
 </head>
 <body>
     <main>
-        <th:block th:replace="~{common/header}"></th:block>
+        <!-- <th:block th:replace="~{common/header}"></th:block> -->
+        
+        <header>
+            <div class="header">
+              <section class="cls-section">
+                <div class="nav">
+                  <a href="#" class="nav-a" id="nav-logo">로고</a>
+                </div>
+              </section>
+              <section class="cls-section">
+                <div class="nav">
+                  <nav>
+                    <ul>
+                      <li>
+                        <a href="#" class="nav-a" id="nav-1">커뮤니티</a>
+                      </li>
+                      <li><a href="#" class="nav-a" id="nav-2">지식in</a></li>
+                      <li><a href="#" class="nav-a" id="nav-3">쇼츠</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </section>
+              <section class="cls-section">
+                <form action="#">
+                  <div class="cls-search">
+                    <input type="text" class="search-btn" />
+                    <button class="btn-search">검색</button>
+                  </div>
+                </form>
+                <div class="cls-login">
+                  <a href="#">로그인</a>
+                </div>
+              </section>
+            </div>
+          </header>
+        
+        <div class="myPage-wallpaper">
+            <img src="../images/wallpaper.png" id="wallpaper" >
+        </div>
+
+        <section class="myPage-middle">
+        
+            <div class="myPage-middle-profile">
+        
+                <img src="../images/logo.jpg" id="memberProfile">
+                <span id="nickName" th:text="*{memberNickname}">닉네임</span>
+                <p id="email" th:text="*{memberEmail}">이메일</p>
+
+            </div>    
+
+        <hr>
+        </section>
+			<!-- <th:block th:replace="~내{myPage/sideMenu}"></th:block> -->
         
         <section class="myPage-content">
-
-            <th:block th:replace="~{myPage/sideMenu}"></th:block>
-        
-            <section class="myPage-main">
-
-                <h1 class="myPage-title">프로필</h1>
-                <span class="myPage-subject">프로필 이미지를 변경할 수 있습니다.</span>
-
-                <form action="profile" method="POST" name="myPageFrm" id="profileFrm" enctype="multipart/form-data" >     
-                    <div class="profile-image-area">
-
-                        <img src="/images/user.png" id="profileImage">
-
-                    </div>
-                    <span id="deleteImage">x</span>
-
-                    <div class="profile-btn-area">
-                        <label for="imageInput">이미지 선택</label>
-                        <input type="file" name="profileImage" id="imageInput" accept="image/*">
-                        <button>변경하기</button>
-                    </div>
+            <section class="left-side">
+            
+                <ul class="list-group">
+                    <li> <a href="/myPage/home/">Home</a></li>
+            
+                    <li> <a href="/myPage/profile">내 프로필</a> </li>
                     
-                    <div class="myPage-row">
-                        <label>이메일</label>
-                        <span th:text="${session.loginMember.memberEmail}"></span>
-                    </div>
+                    <li> <a href="/myPage/community">나의 커뮤니티 글</a> </li>
                     
-                    <div class="myPage-row">
-                        <label>가입일</label>
-                        <span th:text="${session.loginMember.enrollDate}"></span>
-                    </div>
+                    <li> <a href="/myPage/kin">나의 지식in 글</a> </li>
+            
+                    <li> <a href="/myPage/shorts">나의 쇼츠</a> </li>
                     
-                </form>
+                    <li> <a href="/myPage/diary"> 다이어리</a> </li>
+                    
+                </ul>
                 
+                
+            </section>
+            <section class="myPage-profile-main">
+                <label id="myProfile">내 프로필</label>
+             <section class="myPage-profile-total">
+                   
+                        <div class="myPage-profile-upper">
+                            <div class="profile-content">
+                                <form action="changeNickname" method="POST">
+                                    닉네임 <input type="text" id="nickname"> <button id="editButton">수정하기</button>
+                                </form>
+                                <br>
+                                <form action="changePw">
+                                    비밀번호 <input type="password" id="pw"> <button id="editButton">수정하기</button>
+                                </form>
+                                <br>
+                                <form action="changePw2">
+                                    비밀번호 확인 <input type="password" id="pwCheck"> 
+                                </form>
+                                <br>
+                                <form action="changeEmail">
+                                    이메일 <input type="email" id="profileEmail"> <button id="editButton">수정하기</button>
+                                </form>
+                            </div> 
+                            <div class="myPage-profile-img">
+                                <form action="profile" method="POST" name="myPageChangeImg">
+                                    <div class="profile-image-area">
+                                        <img th:src="#{user.default.image}" id="memberProfile">
+                                        <input type="file" id="memberProfile" name="imageInput" accpet="image/">
+                                    </div>
+                                </form> 
+                            </div>
+                        </div> 
+                        
+                         <div class="myPage-profile-mid">
+                             배경화면 
+                             <br>
+                             <div class="background-img">
+                                 <input type="file" id="backgroundPic">
+                             </div>
+                         </div>
+
+                         <span class="myPage-profile-lower"><a href="../html/myPage-home.html"><button id="homeButton">홈으로</button> </a> 
+                            <form action="secession" method="POST"> 
+                                <button id="secessionButton">회원 탈퇴</button>
+                            </form>
+                        </span>   
+                        
+                    </section>  
+               
+                    
 
             </section>
-
         </section>
 
-    </main>
 
     <th:block th:replace="~{common/footer}"></th:block>
 
