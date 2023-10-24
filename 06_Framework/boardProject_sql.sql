@@ -129,5 +129,9 @@ MEMBER_DEL_FL ='Y'
 WHERE MEMBER_NO = 11;
 COMMIT;
 
-
+-- 이메일 중복 검사 (중복 O -> 1, 중복 X -> 0)
+SELECT COUNT(*)
+FROM "MEMBER"
+WHERE MEMBER_DEL_FL = 'N'
+AND MEMBER_EMAIL = 'member01@naver.com';
 
