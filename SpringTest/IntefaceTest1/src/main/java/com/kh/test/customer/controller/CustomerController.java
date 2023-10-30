@@ -13,7 +13,6 @@ import com.kh.test.customer.model.service.CustomerService;
 
 @Controller
 @RequestMapping("/")
-@SessionAttributes({"addCustomer"})
 public class CustomerController {
 	
 	@Autowired
