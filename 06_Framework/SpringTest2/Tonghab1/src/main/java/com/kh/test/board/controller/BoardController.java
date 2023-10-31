@@ -1,5 +1,7 @@
 package com.kh.test.board.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,24 +21,18 @@ public class BoardController {
 	@GetMapping("selectBoard")
 	public String selectBoard(String inputBoard, Model model) {
 		
-		Board searchBoard = service.selectBoard(inputBoard);
+		List<Board> boardList = service.selectBoard(inputBoard);
 		
-		if(searchBoard != null) {
+		if(!boardList.isEmpty()) {
 			
-			model.addAttribute("searchBoard", searchBoard);
+			model.addAttribute("boardList", boardList);
 			return "searchSuccess";
 		}
 		
-	
 		return "searchFail";
 		
 		
-		
-		
 	}
-	
-		
-	
 	
 
 }

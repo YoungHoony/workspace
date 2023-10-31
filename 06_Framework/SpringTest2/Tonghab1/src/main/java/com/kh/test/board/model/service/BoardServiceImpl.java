@@ -16,12 +16,11 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardMapper mapper;
 	
-	@Override
-	public Board selectBoard(String inputBoard) {
-		
-		List<Board> boardList = new selectBoard<Board>;
-		
-		return "mapper.selectBoard(inputBoard)";
-	}
+
+@Override
+public List<Board> selectBoard(String inputBoard) {
+	
+	return mapper.selectBoard(inputBoard);
+}
 
 }

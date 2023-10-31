@@ -8,7 +8,7 @@
 <body>
     <h1>게시글 검색 결과</h1>
 
-    <table th:object="{board}">
+    <table border="1">
         <tr>
             <th>번호</th>
             <th>제목</th>
@@ -17,9 +17,10 @@
             <th>조회수</th>
             <th>작성날짜</th>
         </tr>
-        <tr >
+        <tr th:each="board : ${boardList}" th:object="${board}" >
             <td th:text="*{boardNo}">내용</td>
             <td th:text="*{boardTitle}">내용</td>
+            <td th:text="*{userId}">내용</td>
             <td th:text="*{boardContent}">내용</td>
             <td th:text="*{boardReadCount}">내용</td>
             <td th:text="*{boardDate}">내용</td>
