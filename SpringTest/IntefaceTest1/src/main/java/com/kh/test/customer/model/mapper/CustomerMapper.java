@@ -8,5 +8,7 @@ import com.kh.test.customer.model.dto.Customer;
 public interface CustomerMapper {
 
 	int addCustomer(Customer inputMember);
+
+	int updateCustomer(String inputMember);
 	
 }

@@ -14,10 +14,19 @@ public class CustomerServiceiml implements CustomerService {
 	@Autowired
 	private CustomerMapper mapper;
 	
+//	@Override
+//	public int addCustomer(Customer inputMember, String memberAddress) {
+//		
+//		return mapper.addCustomer(inputMember);
+//	}
+	
 	@Override
-	public int addCustomer(Customer inputMember, String memberAddress) {
-		
-		return mapper.addCustomer(inputMember);
+	public int updateCustomer(String inputMember) {
+		return mapper.updateCustomer(inputMember);
 	}
+	
+	
+	
+	
 
 }

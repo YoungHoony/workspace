@@ -12,20 +12,41 @@ import com.kh.test.customer.model.dto.Customer;
 import com.kh.test.customer.model.service.CustomerService;
 
 @Controller
-@RequestMapping("/")
 public class CustomerController {
+//	
+//	@Autowired
+//	private CustomerService service;
+//	
+//	@PostMapping("addCustomer")
+//	public String addCustomer( Customer inputMember, String memberAddress, RedirectAttributes ra ) {
+//		
+//		int result = service.addCustomer(inputMember, memberAddress);
+//		
+//		return "result";
+//	}
+//	
 	
 	@Autowired
 	private CustomerService service;
 	
-	@PostMapping("addCustomer")
-	public String addCustomer( Customer inputMember, String memberAddress, RedirectAttributes ra ) {
+	@PostMapping("updateCustomer")
+	public String updateCustomer(String inputMember) {
 		
-		int result = service.addCustomer(inputMember, memberAddress);
+		int result = service.updateCustomer(inputMember);
 		
+		String message = null;
+		
+		if(result>0) {
+			message = "수정 성공!!!";
+			return "result";
+			
+		} 
+		
+		message ="회원 번호가 일치하는 회원이 없습니다.";
 		return "result";
+		
+		
 	}
-	
 
 	
 	

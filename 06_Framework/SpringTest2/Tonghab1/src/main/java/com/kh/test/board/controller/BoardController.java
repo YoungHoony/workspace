@@ -12,7 +12,6 @@ import com.kh.test.board.model.dto.Board;
 import com.kh.test.board.model.service.BoardService;
 
 @Controller
-@RequestMapping("/")
 public class BoardController {
 	
 	@Autowired
@@ -33,6 +32,25 @@ public class BoardController {
 		
 		
 	}
+	
+//	@Autowired
+//
+//	private CustomerService service;
+//
+//	@PostMapping("updateCustomer")
+//
+//	public String updateCustomer(Customer customer, Model model) {
+//
+//	int result = service.updateCustomer(customer);
+//
+//	if(result > 0) model.addAttribute("message", "수정 성공!!!");
+//
+//	else model.addAttribute("message", "회원 번호가 일치하는 회원이 없습니다");
+//
+//	return "result";
+//
+//	}
+
 	
 
 }

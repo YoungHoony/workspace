@@ -4,6 +4,8 @@ import com.kh.test.customer.model.dto.Customer;
 
 public interface CustomerService {
 
-	int addCustomer(Customer inputMember, String memberAddress);
+//	int addCustomer(Customer inputMember, String memberAddress);
+
+	int updateCustomer(String inputMember);
 
 }

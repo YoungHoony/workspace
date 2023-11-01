@@ -6,9 +6,9 @@
     <title>고객(Costomer) 추가</title>
 </head>
 <body>
-    <h1>고객 추가</h1>
+    <!-- <h1>고객 추가</h1> -->
     
-    <form action="addCustomer" method="POST">
+    <!-- <form action="addCustomer" method="POST">
         이름 : <input type="text" name="customerName">
         <br>
         전화번호 : <input type="text" name="customerTel">
@@ -17,7 +17,21 @@
         <br>
         <button>추가</button>
     </form>
-    
+     -->
+
+     <h1>회원 번호 일치하는 고객 정보 수정</h1>
+
+     <form action="updateCustomer" method="POST" name="inputMember">
+        회원번호 : <input type="number" name="customerNo">
+        <br>
+        이름 : <input type="text" name="customerName">
+        <br>
+        전화번호 : <input type="text" name="customerTel">
+        <br>
+        주소 : <input type="text" name="customerAddress">
+        <button>수정</button>
+
+     </form>
     
 </body>
 </html>
