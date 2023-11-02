@@ -9,7 +9,11 @@
 		FROM TB_BOARD tb 
 		JOIN TB_USER USING(USER_NO)
 		WHERE BOARD_TITLE LIKE '%${inputTitle}%'
+	
 		
 	</select>
+	
+	<!-- To_CHAR(BOARD_DATE, 'YYYY-MM-DD') BOARD_DATE 
+	JOIN TB_USER USING(USER_NO)-->
 	
 </mapper>

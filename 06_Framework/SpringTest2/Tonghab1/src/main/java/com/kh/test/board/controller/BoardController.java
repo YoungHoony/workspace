@@ -32,7 +32,30 @@ public class BoardController {
 		
 		
 	}
-	
+	/* 
+	 * 
+	 * 
+	 * @Controller
+	 * 
+	 * @Autowired
+	 * private BoardService service;
+	 * 
+	 * @GetMapping("selectBoard")
+	 * public String selectBoard(String inputMember, Model model)
+	 * 
+	 * List<Board> boardList = service.selectBoard(inputMember);
+	 * 
+	 * if(!boardList.isEmpty()){
+	 * 
+	 * model.addAttribute("boardList", boardList);
+	 *
+	 * return "success";}
+	 * 
+	 * return "fail";
+	 * 
+	 * 
+	 * 
+	 * */
 //	@Autowired
 //
 //	private CustomerService service;

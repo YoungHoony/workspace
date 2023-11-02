@@ -111,7 +111,7 @@ public class MyPageServiceImpl implements MyPageService {
 		
 		if(profileImg.getSize() > 0) { // 업로드된 파일이 있다면
 			
-			// 1) 파일명 변경
+			// 1) 파일명 변경 // 파일명 같으면 이전 파일을 덮어씌우니까. 파일명을 변경
 			rename = Util.fileRename( profileImg.getOriginalFilename());
 			
 			// 2) 바뀐 파일명 + 경로를 loginMember 세팅
