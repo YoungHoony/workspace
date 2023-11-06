@@ -228,19 +228,19 @@ public class BoardController {
         	if (board.getImageList().size() > 0) {
 
         		BoardImg thumbnail = null;
+        		
+        		// 썸네일이 존재하면(이라는 뜻) 
         		if (board.getImageList().get(0).getImgOrder() == 0) {
         			thumbnail = board.getImageList().get(0);
             }
 
         		model.addAttribute("thumbnail", thumbnail);
         		model.addAttribute("start", thumbnail != null ? 1 : 0);
+        		// 썸네일이 있으면 1, 없으면 0을 start로 세팅하는 삼항 연산자. 
          }
          
-        	// 썸네일이 있을 경우 1, 없으면 0을 start로 세팅
-        	model.addAttribute("start", board.getThumbnail() != null ? 1 : 0);
         
-        
-		}
+	}
 		
 			else { // 게시글이 없을 경우
 				path = "redirect:/board/" + boardCode;
@@ -269,5 +269,8 @@ public class BoardController {
 		// -> 거의 없음. 자동 세션이 만료되어서 로그아웃이 되었던가, 게시글이 갑자기 삭제되는 
 		//  이상한 일이 아닌 이상 실패 할 일 없음
 	}
+	
+	
+	
 	
 }

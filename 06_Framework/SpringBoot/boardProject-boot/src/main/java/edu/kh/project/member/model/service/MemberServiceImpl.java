@@ -64,11 +64,7 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.signup(inputMember);
 	}
 	
-	@Override
-	public Member quickLogin(String memberEmail) {
-		return mapper.login(memberEmail);
-	}
-	
+
 	@Override
 	public int checkEmail(String email) {
 		return mapper.checkEmail(email);
@@ -77,6 +73,10 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public int checkNickname(String nickname) {
 		return mapper.checkNickname(nickname);
+	}
+	@Override
+	public Member quickLogin(String memberEmail) {
+		return null;
 	}
 	
 }

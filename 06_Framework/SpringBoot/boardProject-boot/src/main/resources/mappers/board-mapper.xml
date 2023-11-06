@@ -24,12 +24,16 @@
 	         javaType : List(컬렉션)의 타입을 지정
 	         ofType : List(컬렉션)의 제네릭(타입 제한) 지정
       	-->
+      	
+      	<!-- 댓글 조회 -->
 		<collection property="commentList" 
 					select="selectCommentList" 
 					column = "BOARD_NO" 
 					javaType="java.util.ArrayList"
 					ofType="Comment" 
 					/>
+					
+		<!-- 이미지 조회 -->
 		<collection property="imageList" 
                		select="selectImageList" 
                		column="BOARD_NO"

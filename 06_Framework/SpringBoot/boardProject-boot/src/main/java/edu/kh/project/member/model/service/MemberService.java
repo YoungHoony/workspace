@@ -17,12 +17,6 @@ public interface MemberService {
 	 */
 	int signup(Member inputMember, String[] memberAddress);
 
-	
-	/** 빠른 로그인
-	 * @param memberEmail
-	 * @return loginMember
-	 */
-	Member quickLogin(String memberEmail);
 
 	/** 이메일 중복검사
 	 * @param email
@@ -35,5 +29,7 @@ public interface MemberService {
 	 * @return 0 또는 1
 	 */
 	int checkNickname(String nickname);
+
+	Member quickLogin(String memberEmail);
 
 }

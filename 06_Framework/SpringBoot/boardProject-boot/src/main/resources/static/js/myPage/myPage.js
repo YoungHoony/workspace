@@ -84,11 +84,12 @@ if(imageInput != null) { // #imageInput 존재할 때
 
             // 복제본은 이벤트가 복제 안되니까 다시 이벤트를 추가
             imageInput.addEventListener("change", changeImageFn);
+
             return; 
         }
 
 
-        // --------------------------- 선택된 파일의 크기가 지정된 크기를 초과하는 경우 ---------------------------------
+        // ----------- 선택된 파일의 크기가 지정된 크기를 초과하는 경우 -----------
         const maxSize = 1024 * 1024 ; // 1MB (byte 단위)
 
         if(uploadFile.size > maxSize) { 
@@ -129,7 +130,7 @@ if(imageInput != null) { // #imageInput 존재할 때
         // 매개변수에 작성된 파일을 읽어서 
         // 파일을 나타내는 URL 형태로 변경
         // -> FileReader.result 필드에 저장되어 있음
-        reader.readAsDataURL(uploadFile)
+        reader.readAsDataURL(uploadFile);
 
         // 파일을 다 읽었을 때 
         reader.onload = e => {
