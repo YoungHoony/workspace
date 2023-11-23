@@ -802,3 +802,41 @@ ALTER TABLE "MESSAGE" ADD CONSTRAINT "FK_CHATTING_ROOM_TO_MESSAGE_1" FOREIGN KEY
 REFERENCES "CHATTING_ROOM" (
 	"CHATTING_NO"
 ) ON DELETE CASCADE;
+
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+-- DB 모든 이미지 파일명만 조회
+
+-- BOARD_IMG 
+
+SELECT IMG_RENAME "rename"
+FROM BOARD_IMG
+WHERE IMG_NO != 0;
+
+-- MEMBER
+SELECT SUBSTR(PROFILE_IMG, INSTR(PROFILE_IMG, '/',-1) + 1) "rename"
+FROM "MEMBER" 
+WHERE MEMBER_NO != 0
+AND PROFILE_IMG IS NOT NULL;
+
+-------------------------------
+
+SELECT IMG_RENAME "rename"
+FROM BOARD_IMG
+WHERE IMG_NO != 0
+
+UNION
+
+SELECT SUBSTR(PROFILE_IMG, INSTR(PROFILE_IMG, '/',-1) + 1) "rename"
+FROM "MEMBER" 
+WHERE MEMBER_NO != 0
+AND PROFILE_IMG IS NOT NULL;
+
+
+
+
+

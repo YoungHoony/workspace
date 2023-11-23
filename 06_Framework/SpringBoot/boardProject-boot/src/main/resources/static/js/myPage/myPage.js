@@ -165,6 +165,7 @@ if(imageInput != null) { // #imageInput 존재할 때
         backupInput.value = "";
 
         statusCheck = 0; // 있었는데 없어짐. (x버튼 누른 후)
+        // alert("이미지가 초기화 됩니다.");
     });
 
     // ---------- 프로필 이미지 변경 form태그 제출 시 동작 ------------

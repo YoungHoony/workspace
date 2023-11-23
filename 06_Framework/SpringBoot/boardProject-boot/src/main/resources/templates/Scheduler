@@ -1,0 +1,7 @@
+클라이언트 요청 -> 서버 응답
+
+일정 시간, 지정된 시간마다 알아서 동작
+
+DB : Job Schedular(시간마다 SQL 수행)
+
+Spring : @Scheduled (시간마다 기능 수행)
