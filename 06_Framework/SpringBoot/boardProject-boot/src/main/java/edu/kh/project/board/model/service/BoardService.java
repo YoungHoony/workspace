@@ -5,6 +5,9 @@ import java.util.Map;
 
 import edu.kh.project.board.model.dto.Board;
 
+/**
+ * 
+ */
 public interface BoardService {
 
 	
@@ -56,6 +59,12 @@ public interface BoardService {
 	 * @return list
 	 */
 	List<String> selectDbImageList();
+
+	
+	/** 게시판 종류 조회
+	 * @return map
+	 */
+	List<Map<String, Object>> selectBoardTypeList();
 
 
 
