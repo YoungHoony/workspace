@@ -65,7 +65,7 @@ public class ImageDeleteScheduling {
 //	@Scheduled(fixedRate = 5000) // 이전 시작 후 5초 후에 수행
 	
 	//cron="초 분 시 일 월 요일 [년도](생략 가능)" - 요일 : 1(SUN) ~ 7(SAT) 	
-	@Scheduled(cron = "0,15,30,45 * * * * *") // 시계 초 단위가 0, 30인 경우 수행  
+	//@Scheduled(cron = "0,15,30,45 * * * * *") // 시계 초 단위가 0, 30인 경우 수행  
 //	@Scheduled(cron = "0,30 * * * * *") // 시계 초 단위가 0, 30인 경우 수행  
 //	@Scheduled(cron = "0 0 * * * * *") // 정시 마다 수행  
 //	@Scheduled(cron = "0 0 0 * * * *") // 자정 마다 수행  
