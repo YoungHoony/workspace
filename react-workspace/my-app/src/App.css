@@ -3,3 +3,10 @@
   border: 2px solid black;
   
 }
+
+/* 글자 가운데 중간선 긋기 */
+.completed {
+  text-decoration: line-through;
+}
+
+.color-red {color: red;}
