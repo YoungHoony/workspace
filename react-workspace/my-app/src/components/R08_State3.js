@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 /* 자식 컴포넌트 */
 const Id = (props) => {
+  
   console.log(props);
   console.log(props.handler);
   return (
@@ -15,7 +16,7 @@ const Id = (props) => {
 };
 
 /* 자식 컴포넌트 */
-const Pw = ({ handler }) => { // 전달 받은 props 객체에서 key가 'handler'인 요소의 value(함수)를 
+const Pw = ({ handler }) => {  // props 객체에서 전달 받은 값 중  key가 'handler'인 요소의 value(함수)를 반환
   // handler 매개변수에 저장 
 
   // const {handler} = props;

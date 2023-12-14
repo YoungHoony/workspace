@@ -15,6 +15,10 @@ import ConText2 from './components/R11_Context2';
 import Context3 from './components/R13_Context/Parent';
 
 
+
+import Prac1 from './components/prac';
+
+
 /* ============================================================================= */
 /* 
   - React의 컴포넌트(함수에서 반환되는 html 코드)는 딱 하나의 요소만을 반환할 수 있다. 
@@ -26,8 +30,8 @@ function App() {
   return (
     /* <> </> (fragment, 조각) : 반환되는 요소를 감싸는 태그, 해석 X */
     <>
-     {/*  <h1>테스트</h1>
-      {/* <ClassComponent/> */}
+      {/* <h1>테스트</h1>
+      <ClassComponent/> */}
 
       {/* jsx 주석 */}
       {/* <ClassComponent/> */}
@@ -35,7 +39,7 @@ function App() {
 
       {/* <FunctionComponent/> */}
       {/* 자식 컴포넌트 : 부름을 받는 것 */}
-      {/* <Props1/>
+      {/* <Props1/> 
       <Props1 name='홍길동' num='1' />
       <Props1 name='김철수' num='2' />
 
@@ -48,26 +52,28 @@ function App() {
       <hr/>
 
       <Props3 name='김민규' />
-      <Props3 name='윤성국' />
+      <Props3 name='윤성국' />  */}
  
-      <State1 />
+      {/* <State1 />
 
       <hr/>
 
       <State2 init={0}/>
-      <State2 init={100}/>
+      <State2 init={100}/> */}
 
       <hr/>
 
-      <State3 />   */}
+      {/* <State3 />   
 
-      {/* <TodoList /> */}
+      <TodoList />
 
-      {/* <ConText1 />
+      <ConText1 />
 
       <ConText2 /> */}
 
       <Context3 />
+
+      {/* <Prac1/> */}
 
 
 
