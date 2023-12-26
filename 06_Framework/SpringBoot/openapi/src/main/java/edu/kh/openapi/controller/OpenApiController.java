@@ -208,6 +208,63 @@ public class OpenApiController {
 	      
 	}
 	
+	@GetMapping("air")
+	public String airPollution(@RequestParam("location") String location) throws IOException{
+
+	final String serviceKey = "VcbepY4cNJk%2BDnhTIbR0c71kDzGFYSHoaFX5VRegchN6WSqrekGX0glGXtixCpKdbF8VOEmzFhfwhgeIKG62%2Bg%3D%3D";	
+		
+	String requestUrl = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty";
+
+	StringBuilder urlBuilder = new StringBuilder(requestUrl);
+
+	urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=" + serviceKey);
+	urlBuilder.append("&" + URLEncoder.encode("sidoName","UTF-8") + "=" + URLEncoder.encode("서울", "UTF-8"));
+	urlBuilder.append("&" + URLEncoder.encode("returnType","UTF-8") + "=" + URLEncoder.encode("JSON", "UTF-8"));
+
+
+	// 공공데이터 요청 및 응답
+
+	URL url = new URL(urlBuilder.toString());
+
+	HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+	conn.setRequestMethod("GET");
+
+	conn.setRequestProperty("Content-type", "application/json");
+
+	BufferedReader rd;
+
+	if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
+
+	rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+	} else {
+
+	rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+
+	}
+
+	StringBuilder sb = new StringBuilder();
+
+	String line;
+
+	while ((line = rd.readLine()) != null) {
+
+	sb.append(line);
+
+	}
+
+	rd.close();
+
+	conn.disconnect();
+
+
+	return "air";
+
+	}
+	
+	
+	
 	
 
 }
